@@ -1,0 +1,132 @@
+@import '~@angular/material/theming';
+
+@mixin app-light-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    .app-sidenav {
+        background-color: map-get($mat-grey, 400);
+    }
+
+    .app-content {
+        background-color: white;
+    }
+
+    .profile {
+        border: 2px mat-color($accent) solid;
+    }
+
+    .profile-name {
+        color: mat-color($accent);
+    }
+
+    .headline {
+        color: mat-color($accent);
+        border-bottom: 2px mat-color($accent) solid;
+    }
+
+    .text-1 {
+        color: map-get($mat-grey, 700);
+    }
+}
+
+@mixin app-dark-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    .app-sidenav {
+        background-color: map-get($mat-grey, 700);
+    }
+
+    .app-content {
+        background-color: map-get($mat-grey, 400);;
+    }
+
+    .profile {
+        border: 2px mat-color($accent) solid;
+    }
+
+    .profile-name {
+        color: mat-color($accent);
+    }
+
+    .headline {
+        color: mat-color($accent);
+        border-bottom: 2px mat-color($accent) solid;
+    }
+
+    .text-1 {
+        color: map-get($mat-grey, 400);
+    }
+}
+
+.app-background {
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.app-container {
+    margin: 20px;
+    width: 85%;
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+        0px 10px 14px 1px rgba(0, 0, 0, 0.14),
+        0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}
+
+.app-sidenav {
+    min-width: 250px;
+}
+
+.app-content {
+    min-width: 600px;
+}
+
+.profile {
+    width: 60%;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+}
+
+.headline {
+    align-self: center;
+    width: 120px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+}
+
+.textline {
+    width: 100%;
+    padding: 3px;
+}
+
+.text-1 {
+    font-size: 12px;
+    min-width: 70px;
+}
+
+.text-2 {
+    min-width: 120px;
+    font-size: 12px;
+}
+
+.contact-line {
+    width: 100%;
+}
+
+.icon-1 {
+    font-size: 18px;
+}

@@ -1,20 +1,67 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div fxLayout="column" fxLayoutAlign="start center" class="app-background" [class.my-dark-theme]="isDarkTheme">
+  <div class="app-container">
+    <md-card fxFlex="30%" class="app-sidenav" fxLayout="column" fxLayoutAlign="start center">
+      <img class="profile push" src="assets/img/profile.png">
 
+      <div class="profile-name">
+        <span>DAO DUC DUY</span>
+      </div>
+      <div class="contact-line" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1"><md-icon class="icon-1">email</md-icon></span>
+        <span class="text-2">my.personal@gmail.com</span>
+      </div>
+      <div class="contact-line" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1"><md-icon class="icon-1">phone</md-icon></span>
+        <span class="text-2">+65 8080 8080</span>
+      </div>
+
+      <!-- Skills -->
+      <div class="headline">
+        <span>Skills</span>
+      </div>
+      <div class="textline" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1">Languages:</span>
+        <span class="text-2">C# , Scala , Java , C++ , Python , Bash</span>
+      </div>
+      <div class="textline" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1">Frontend:</span>
+        <span class="text-2">Angular 4 , Material Design , Ionic , Electron</span>
+      </div>
+      <div class="textline" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1">Backend:</span>
+        <span class="text-2">Akka / Akka.NET , REST API , Web services</span>
+      </div>
+
+      <!-- Education -->
+      <div class="headline">
+        <span>Education</span>
+      </div>
+      <div class="textline" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1">University:</span>
+        <span class="text-2">Nayang Technological University ( 2010 - 2013 )</span>
+      </div>
+      <div class="textline" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1">Degree:</span>
+        <span class="text-2">Bachelor of Engineering , Electrical & Electronic Engineering</span>
+      </div>
+      <div class="textline" fxLayout="row" fxLayoutGap="5px">
+        <span fxFlex="30%" class="text-1">GPA:</span>
+        <span class="text-2">4.5 / 5.0 ( First class )</span>
+      </div>
+    </md-card>
+    <md-card fxFlex="70%" class="app-content">
+      <md-card-content fxLayout="column" fxLayoutAlign="center center">
+        <md-card-actions>
+          <button md-raised-button color="primary">primary</button>
+          <button md-raised-button color="accent">accent</button>
+          <button md-raised-button color="warn">warn</button>
+        </md-card-actions>
+        <md-card-actions>
+          <button md-button color="accent" (click)="isDarkTheme = !isDarkTheme">
+            Switch to Dark theme
+          </button>
+        </md-card-actions>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
